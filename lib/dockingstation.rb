@@ -1,6 +1,8 @@
 require './lib/bike'
 
 class DockingStation
+  DEFAULT_CAPACITY = 20
+
   def initialize
     @bikes = []
   end
@@ -24,11 +26,10 @@ class DockingStation
  private 
 
   def full?
-    @bikes.length >= 20
+    @bikes.length >= DEFAULT_CAPACITY
   end  
 
   def empty?
     @bikes.empty?
   end
-
 end
